@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto&display=swap);
+
+:root {
+  --color-1-1: #3bba9c;
+  --color-1-2: #435c4e;
+  --color-1-3: #98ba3b;
+  --color-1-4: #83d8c4;
+  --color-2-1: #2e3047;
+  --color-2-2: #2e3847;
+  --color-2-3: #342e47;
+  --color-2-4: #2e3c47;
+  --color-3-1: #43455c;
+  --color-4-1: #3c3f58;
+  --color-5-1: #707793;
+  --color-5-2: #595f77;
+  --color-5-3: #aaaebf;
+  --color-6-1: #ba3b59;
+  --color-6-2: #5c4352;
+  --color-6-3: #ba3b98;
+  --color-6-4: #ba5d3b;
+  --color-6-5: #ba9c3b;
+  --color-6-6: #402f35;
+  --color-7-1: #3c4d58;
+  --color-7-2: #43525c;
+  --color-8-1: #4974a5;
+  --color-8-2: #009bb7;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--color-2-1);
+}
+
+.container {
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 1500px) {
+  .container {
+    width: 50%;
+  }
+}
+
+.header {
+  top: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.btn {
+  width: 8rem;
+  background-color: var(--color-2-1);
+  border: 1px solid var(--color-5-1);
+  color: var(--color-5-3);
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  margin: 0.3rem;
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: var(--color-2-3);
+}
+
+.content {
+  text-align: center;
+  color: var(--color-1-1);
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  min-height: 20rem;
+  padding: 1rem;
+  border-color: transparent;
+  border-radius: 3px;
+  background-color: var(--color-2-3);
+  margin: 2rem auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+@media screen and (min-width: 1500px) {
+  .card {
+    width: 50%;
+  }
+}
+
+.alert {
+  color: var(--color-6-1);
+  font-size: 4rem;
+  font-weight: 900;
+  margin: auto;
+}
+
+.error {
+  color: var(--color-6-1);
+  font-size: 2rem;
+  margin: auto;
+}
+
+.spinner-container {
+  height: 3rem;
+}
+.spinner {
+  z-index: 1001;
+  margin: auto;
+  height: 3rem;
+  width: 3rem;
+  border: 6px solid var(--color-5-1);
+  border-top-color: var(--color-5-2);
+  border-radius: 50%;
+  animation: rotation 0.6s infinite linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
